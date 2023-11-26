@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./static/css/reg.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+</head>
+
+<body>
+    <div class="background-space">
+        <div class="main-image"><img src="./static/images/newreg.jpg" alt="doctor-picture-animated"></div>
+        <div class="navigation-space">
+            <h1>Please Register</h1>
+            <form class="newRegDetails" action="/register_input" method="post">
+                <input class="data Uname" type="text" name="name" placeholder="Name" required><br>
+                <input class="data UEmail" type="text" name="email" placeholder="Email Id" required><br>
+                <input class="data Uphno" type="text" name="phone_number" placeholder="Phone Number" required><br>
+                <input class="data Upw" type="password" name="password_temp" placeholder="Password" required><br>
+                <input class="data URpw" type="password" name="password" placeholder=" Confirm Password" required><br><br>
+                <input class="login-button hovereff subBtn" type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            var password = document.querySelector('.Upw').value;
+            var confirmPassword = document.querySelector('.URpw').value;
+            if (password !== confirmPassword) {
+                var isErrorExists = document.querySelector(".error-msg");
+                if (isErrorExists == null) {
+                    UseForm = document.querySelector('form');
+                    var errorElement = document.createElement('p');
+                    errorElement.textContent = "Password does not match!";
+                    errorElement.style.fontSize = '11px';
+                    errorElement.style.color = 'red';
+                    errorElement.classList.add("error-msg");
+                    subBtn = document.querySelector(".subBtn")
+                    UseForm.insertBefore(errorElement, subBtn);
+                }
+                e.preventDefault();
+            };
+        })
+    </script>
+
+</body>
+
+</html>

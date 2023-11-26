@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/static/css/login.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var successMessage = "{{ message }}";
+        if (successMessage == "Account Successfully Created!")
+        {
+            alert("Account Successfully Created!");
+        }
+        var errorMessage = "{{ error }}"; // Access the error message sent from the server
+
+        if (errorMessage === "Invalid username or password") {
+            var errorElement = document.createElement('p');
+            errorElement.textContent = errorMessage;
+            errorElement.style.fontSize = '10px';
+            errorElement.style.color = 'red';
+            const beforeLogin = document.querySelector('.login-button');
+            const useForm = document.querySelector('form');
+            useForm.insertBefore(errorElement, beforeLogin);
+        } //show error message underneath the forms to show incorrect password/username
+    });
+</script>
+</head>
+
+<body>
+    <div class="background-space">
+        <div class="main-image"><img src="/static/images/login.png" alt="doctor-picture-animated"></div>
+        <div class="navigation-space">
+            <h1>Welcome</h1>
+            <form action="/validate-login" method="post">
+                <input class="data" type="text" name="Email" placeholder="Email" required><br>
+                <input class="data" type="password" name="password" placeholder="Password" required>
+                <br><br>
+                <input class="login-button hovereff" type="submit" value="Login">
+            </form>
+            <p class="new-reg">new user? <a href="/new-reg">Create an account</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

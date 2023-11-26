@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="/static/js/dashboard.js" defer></script>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Dashboard</h1>
+
+        <div class="appointments">
+            <h2>Upcoming Appointments</h2>
+            <!-- Replace the below structure with dynamic data from the backend -->
+            <table class="appointmentsData">
+
+            </table>
+        </div>
+
+        <a href="/new_appointment" class="button">New Appointment</a>
+        <a href="/logout" class="button">Logout</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var successMessage = "{{ message }}";
+            if (successMessage == "created new booking!")
+            {
+                alert("New Appointment Booked!");
+            }
+        });
+    </script>
+</body>
+</html>

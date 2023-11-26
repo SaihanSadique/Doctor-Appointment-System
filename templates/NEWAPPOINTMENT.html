@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Appointment</title>
+    <link rel="stylesheet" href="/static/css/newApp.css">
+    <script  src="/static/js/newApp.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Schedule Appointment</h1>
+        <form action="/new_post_appointment" method="post">
+            <div class="form-group">
+            </div>
+            <div class="form-group">
+                <label for="appointmentDate">Preferred Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">Preferred Time:</label>
+                <input type="time" id="appointmentTime" name="appointmentTime" required>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="Purpose">Purpose of visit:</label>
+                    <select id="purpose-select" name="purpose-select" required>
+                        <option value="enquiry">Enquiry</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="assesment">Assesment</option>
+                        <option value="court-order">Court Order</option>
+                    </select>
+                </div>
+                <button type="submit">Schedule Appointment</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var ErrorMessage = "{{ message }}";
+            if (ErrorMessage == "BOOKED")
+            {
+                alert("Please try booking at a later slot!");
+            }
+        });
+    </script>
+</body>
+
+</html>
