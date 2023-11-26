@@ -1,0 +1,60 @@
+html {
+    background-color: #6f4a99;
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    background-color: #6f4a99;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    border: solid lightblue;
+    border-radius: 10px;
+    background-color: white;
+    width: 80%;
+    margin: 110px auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .form{
+    background-color: white;
+  }
+  
+  .form-group {
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  select {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }

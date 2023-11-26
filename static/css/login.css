@@ -1,0 +1,64 @@
+html {
+    background-color: #6f4a99;
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+*:focus {
+    outline: none;
+}
+.background-space {
+    background-color: #6f4a99;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.navigation-space {
+    padding: 200px 50px 0px 50px;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: solid lightblue;
+    border-right: solid lightblue;
+    border-bottom: solid lightblue;
+}
+
+.data {
+    margin-top: 10px;
+    border: none;
+    border-bottom: solid 1px;
+    padding-bottom: 5px;
+}
+
+.login-button {
+    color: white;
+    border: none;
+    background-color: #0077B6;
+    min-height: 30px;
+    min-width: 70px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.hovereff:hover{
+    background-color: greenyellow;
+    color: 6f4a99;
+}
+
+.main-image {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 10px;
+    border-top: solid lightblue;
+    border-left: solid lightblue;
+    border-bottom: solid lightblue;
+}
+.new-reg{
+    margin-top: 20px;
+    font-size: 13px;
+}
